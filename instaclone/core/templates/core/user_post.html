@@ -1,0 +1,12 @@
+{% block content %}
+  <h2>User Posts</h2>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <img src="{{ post.image.url }}" alt="User Post Image" width="200">
+        <p>{{ post.description }}</p>
+        <p>Posted by {{ post.user.username }} on {{ post.created_at }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
